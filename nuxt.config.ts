@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+    link: [
+    { rel: "stylesheet", href:
+    "https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" }
+    ],
+    }
+    },
   devtools: { enabled: true },
   modules: ['@vite-pwa/nuxt', '@nuxtjs/tailwindcss'],
 
@@ -7,6 +15,7 @@ export default defineNuxtConfig({
     cssPath: "~/assets/css/tailwind.css",
     configPath: "~/tailwind.config.ts",
   },
+
 
   pwa: {
     manifest: {
